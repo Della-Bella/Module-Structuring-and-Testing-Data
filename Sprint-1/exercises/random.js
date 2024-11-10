@@ -27,7 +27,10 @@ const randomBetween1And200 = Math.random() * 200;
 
  
 // It will help to think about the order in which expressions are evaluated
-// Try logging the value of num and running the program several times to build an idea of what the program is doing*/
+// Try logging the value of num and running the program several times to build an idea of what the program is doing
+
+
+done */
 
 const minimum = 1;
 const maximum = 100;
@@ -35,3 +38,16 @@ const maximum = 100;
 const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 
 console.log(num)
+
+gisdellabella@Giss-MBP exercises % 
+gisdellabella@Giss-MBP exercises % node random.js
+4
+gisdellabella@Giss-MBP exercises % node random.js
+8
+gisdellabella@Giss-MBP exercises % node random.js
+61
+gisdellabella@Giss-MBP exercises % node random.js
+9
+gisdellabella@Giss-MBP exercises % node random.js
+37
+gisdellabella@Giss-MBP exercises % 
