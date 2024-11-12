@@ -24,4 +24,4 @@ function upperSnakeCase(upperCaseTexts) {
 console.log(`${upperSnakeCase("hello there")}`);
 
 //gisdellabella@Giss-MBP implement % node cases.js
-HELLO_THERE
+// HELLO_THERE
