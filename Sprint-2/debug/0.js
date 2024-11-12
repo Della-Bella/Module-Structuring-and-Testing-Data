@@ -2,9 +2,6 @@
 
 /*it will  print 
 the first console.log (a * b) which will call the function inputs 10, 32 = 320
-
-Then give a error/ undefined because .
-
 function multiply(a, b) {
   console.log(a * b);
 }
