@@ -16,11 +16,11 @@
 
 
 function ibmCalculator() {
-    const weight = 53;           // Weight in kilograms
-    const height = 163 / 100;    // Convert height from centimeters to meters
+    const weight = 53;           
+    const height = 163 / 100; //tranforme centimeter to meter
 
-    const calculateIBM = weight / Math.pow(height, 2); // Calculate BMI
-    const result = calculateIBM.toFixed(1);            // Format to 1 decimal place
+    const calculateIBM = weight / Math.pow(height, 2); 
+    const result = calculateIBM.toFixed(1);       //chang for decimal 
 
     return result;
 }
