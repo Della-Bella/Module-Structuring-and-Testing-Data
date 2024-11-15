@@ -58,7 +58,10 @@ function formatTimeDisplay(seconds) {
   return `${pad(totalHours)}:${pad(remainingMinutes)}:${pad(remainingSeconds)}`;
 }
 
-console.log(formatTimeDisplay(61));
-
+//console.log(formatTimeDisplay(61));
 //00:01:01
 //gisdellabella@Giss-MBP interpret %
+
+console.log(formatTimeDisplay(52));
+00:00:52
+gisdellabella@Giss-MBP interpret % 
