@@ -14,7 +14,6 @@ function addPercentageToPrice(price){
    return vat;
 }
   
-let price = (20);
+let price = (30);
 console.log(`Product total price is ${addPercentageToPrice(price)}`);
-
 
