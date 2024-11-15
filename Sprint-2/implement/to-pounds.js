@@ -53,8 +53,8 @@ console.log(result2);
 console.log(result3);
 console.log(result4);
 
+gisdellabella@Giss-MBP implement % node to-pounds.js 
 £7.99
 £0.50
 £52.30
 £5.45
-gisdellabella@Giss-MBP implement % 
