@@ -2,11 +2,54 @@
 
 // You will need to implement a function getCardValue
 
+function getCardValue(card){
+    var convertable = Number(card);
+    if(convertable==='NaN');
+    {
+        
+    }
+}
+
+
+    var convertable = Number(card);
+    if(convertable === 'NaN')
+    {
+        if (typeof card === "string" || card instanceof String)
+            {
+                    return 10;
+            }    
+        }
+    }
+    else 
+    {
+
+    }
+
+}
+/*
+
+
+    if ((typeof card === "string" || card instanceof String) && isNaN(Number(str))) 
+    {
+      return 10;
+    } else if (typeof card == "string" || card instanceof String) {
+      var converted = Number(card);
+      if (converted >= 2 && converted <= 9) {
+        var return_value = Number(card);
+        return return_value;
+      }
+    }
+*/
+
+
+
 // You need to write assertions for your function to check it works in different cases
 
 // Acceptance criteria:
 
-// Given a card string in the format "A♠" (representing a card in blackjack - the last character will always be an emoji for a suit, and all characters before will be a number 2-10, or one letter of J, Q, K, A),
+// Given a card string in the format "A♠" (representing a card in blackjack - the last 
+// character will always be an emoji for a suit, and all characters before will be a number 2-10, 
+// or one letter of J, Q, K, A),
 // When the function getCardValue is called with this card string as input,
 // Then it should return the numerical card value
 
@@ -29,3 +72,6 @@
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+
+module.exports = getCardValue;

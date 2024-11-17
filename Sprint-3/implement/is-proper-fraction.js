@@ -1,3 +1,5 @@
+
+
 // You wil need to implement a function isProperFraction
 // You need to write assertions for your function to check it works in different cases
 
@@ -5,6 +7,19 @@
 // Fractions: https://www.bbc.co.uk/bitesize/topics/zt9n6g8/articles/zjxpp4j
 // Written here like this: 1/2 == Numerator/Denominator
 
+function isProperFraction(numerator, denominator){
+    if(denominator === 0){
+        throw new Error ('Denominator can not be zero')
+    }
+    
+    if (numerator < denominator){
+        return true;
+    } else if (numerator >= denominator){
+        return false;
+    }
+}
+
+module.exports = isProperFraction;
 // Acceptance criteria:
 
 // Proper Fraction check:
@@ -15,12 +30,14 @@
 // Improper Fraction check:
 // Input: numerator = 5, denominator = 2
 // target output: false
-// Explanation: The fraction 5/2 is an improper fraction, where the numerator is greater than or equal to the denominator. The function should return false.
+// Explanation: The fraction 5/2 is an improper fraction, where the numerator is greater than or 
+//equal to the denominator. The function should return false.
 
 // Zero Denominator check:
 // Input: numerator = 3, denominator = 0
 // No target output: Error (Denominator cannot be zero)
-// Explanation: The function should throw an error when the denominator is zero, as it's not a valid fraction.
+// Explanation: The function should throw an error when the denominator is zero, as 
+//it's not a valid fraction.
 
 // Negative Fraction check:
 // Input: numerator = -4, denominator = 7
