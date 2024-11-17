@@ -1,22 +1,12 @@
 // Implement a function getAngleType
 
-function getAngleType(angle) {
-  if (angle > 0 && angle < 90) {
-    return "Acute angle"; // Less than 90 degrees
-  } else if (angle === 90) {
-    return "Right angle"; // Exactly 90 degrees
-  } else if (angle > 90 && angle < 180) {
-    return "Obtuse angle"; // Between 90 and 180 degrees
-  } else if (angle === 180) {
-    return "Straight angle"; // Exactly 180 degrees
-  } else if (angle > 180 && angle < 360) {
-    return "Straight angle"; // Exactly 180 degrees
-  } else {
-    return "Invalid angle"; // For angles outside 0–180 range
+function getAngleType(degrees) {
+  if (degrees === 90) {
+    return "Right angle";
+  } else if (degrees < 90) {
+    return "Acute angle";
   }
 }
-const angle = 45;
-console.log(`The angle ${angle}° is a ${getAngleType(angle)}.`);
 
 //The angle 75° is a Acute angle.
 
@@ -49,4 +39,4 @@ console.log(`The angle ${angle}° is a ${getAngleType(angle)}.`);
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
 
-**_write tests_**
+module.exports = getAngleType;
