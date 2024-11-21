@@ -12,6 +12,12 @@
 // When the function rotateCharacter is called with these inputs,
 // Then it should:
 
+function shiftCharacter(){
+ const rotateCharacter = ("a", 3);
+
+}
+console.log(rotateCharacter("A", 3));
+
 // Scenario: Rotate Lowercase Letters:
 // Given a lowercase letter character and a positive integer shift,
 // When the function is called with these inputs,
