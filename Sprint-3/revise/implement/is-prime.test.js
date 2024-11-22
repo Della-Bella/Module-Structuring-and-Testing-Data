@@ -1,24 +1,22 @@
-// Given a positive integer num,
-// When the isPrime function is called with num as input,
-// Then it should check if the num is prime
 
-//A prime number is a natural number greater than 1 that has
-// no positive divisors other than 1 and itself.
 
-function isPrime(num) {
-  if (num <= 1) { // 1 is not prime number
-    return false;
-  }
-  for (let i = 2; i * i <= num; i++) {
-    if (num % i === 0) {
-      return false;
-    }
-  }
-  return true;
-}
+const isPrime = require("./is-prime");
 
-console.log(isPrime(7));   // Output: true
-console.log(isPrime(10));  // Output: false
-console.log(isPrime(17));  // Output: true
-console.log(isPrime(2));   // Output: true
-console.log(isPrime(1));   // Output: false
+test("check if 7 is a prime number", () => {
+  const input = 7;
+  const output = isPrime(input); 
+  expect(output).toBe(true); // Expected: true, because 7 is prime
+});
+
+
+test("check if 17 is a prime number", () => {
+  const input = 17;
+  const output = isPrime(input); // Correct function call
+  expect(output).toBe(true); // Expected: true, because 17 is prime
+});
+
+test("check if 1 is not a prime number", () => {
+  const input = 1;
+  const output = isPrime(input); // Correct function call
+  expect(output).toBe(false); // Expected: false, because 1 is not prime
+});
