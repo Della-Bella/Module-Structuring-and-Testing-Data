@@ -17,16 +17,15 @@ function getOrdinalNumber(number) {
     return number + "th";
   }
 }
+module.exports = getOrdinalNumber;
 
 //const input = 1;
 //const input = 4;
 //4 as an ordinal number will be 4th
 //const input = 12;
 //12 as an ordinal number will be 12th
-const ordinalNumber = getOrdinalNumber(input);
-console.log(`1 as an ordinal number will be ${ordinalNumber}`);
 
-module.exports = getOrdinalNumber;
+
 
 
 
