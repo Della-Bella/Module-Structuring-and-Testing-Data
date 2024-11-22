@@ -2,7 +2,7 @@
 //When the sum of any two side lengths is less than or equal to the length of the
 // third side*/
 
-const isValidTriangle = require("./isValidTriangle"); 
+const isValidTriangle = require("./is-valid-triangle"); 
 
 describe("isValidTriangle Function Tests", () => {
   // Scenario: Invalid Triangle - Sum of Two Sides <= Third Side
