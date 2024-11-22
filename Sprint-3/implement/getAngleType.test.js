@@ -1,4 +1,4 @@
-const getAngleType = require("./get-angle-type"); // Adjust the path if necessary
+const getAngleType = require("./get-angle-type"); 
 
 //Identify Right Angles:
 // When the angle is exactly 90 degrees,
