@@ -1,19 +1,34 @@
 // This problem involves playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
 
 // You will need to implement a function getCardValue
+const cardValues = {
+  A: 11,
+  K: 10,
+  Q: 10,
+  J: 10,
+  10: 10,
+  9: 9,
+};
 
 
-function getCardValue (card){
-  if () {
-    return(2, "0")
-    return 1,10;
+function getCardValue(card) {
+  const rank = card.slice(0, -1);
 
-  } else if (letter) {
-    return "J, Q, K, A";
+  if (rank === "A") {
+    return 11;
+  } else if (rank === "K" || rank === "Q" || rank === "J" || rank === "10") {
+    return 10;
+  } else {
+    return parseInt(rank, 10);
+  }
 }
-}
+module.exports = getCardValue;
 
-const validRanks = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
+console.log(getCardValue("A♠")); // Output: 11
+console.log(getCardValue("10♣")); // Output: 10
+console.log(getCardValue("K♦")); // Output: 10
+console.log(getCardValue("5♥")); // Output: 5
+console.log(getCardValue("2♠")); // Output: 2
 
 // You need to write assertions for your function to check it works in different cases
 
@@ -48,4 +63,3 @@ const validRanks = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K",
 // Then it should throw an error indicating "Invalid card rank."
 
 
-module.exports = getCardValue;
