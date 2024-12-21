@@ -6,3 +6,5 @@ test("rotates lowercase letters correctly", function () {
   expect(rotateChar("F", 1)).toBe("G"); // 'f' -> 'g'
   expect(rotateChar("z", 1)).toBe("a"); // Wraparound: 'z' -> 'a'
 });
+
+
