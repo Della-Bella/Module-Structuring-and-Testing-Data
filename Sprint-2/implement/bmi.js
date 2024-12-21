@@ -15,22 +15,19 @@
 // It should return their Body Mass Index to 1 decimal place
 
 
-function ibmCalculator() {
-    const weight = 150;           
-    const height = 170 / 100; //tranforme centimeter to meter
+//    const weight = 150;           
+//     const height = 170 / 100; //tranforme centimeter to meter
 
-    const calculateIBM = weight / Math.pow(height, 2); 
-    const result = calculateIBM.toFixed(1);       //chang for decimal 
 
+function ibmCalculator( weight, height) {
+    
+    height = height / 100;
+    let calculateIBM = weight / Math.pow(height, 2); 
+    let result = calculateIBM.toFixed(1);       //chang for decimal 
     return result;
 }
 
-console.log(`Your Body Mass Index (BMI) is ${ibmCalculator()}`);
 
-//gisdellabella@Giss-MBP implement % node bmi.js
-//Your Body Mass Index (BMI) is 19.9
-//Your Body Mass Index (BMI) is 20.7
-//Your Body Mass Index (BMI) is 12.8
-//Your Body Mass Index (BMI) is 51.9
+console.log(`Your Body Mass Index (BMI) is ${ibmCalculator(98,126)}`);
 
 
