@@ -18,5 +18,15 @@ function multiply(a, b) {
 
 console.log(`The result of multiplying 10 and 32 is ${multiply(10, 32)}`);
 
+// The function wasn't called initially, so it didn't display the result. 
+// //However, it has now been called and is returning the result.
+
+
+
+
+
+
+
+
 
 
