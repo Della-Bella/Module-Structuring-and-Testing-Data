@@ -5,12 +5,14 @@
 
  
 function convertToPercentage(decimalNumber) {
-   const decimalNumber = 0.5;
-   const percentage = `${decimalNumber * 100}%`;
+ 
+  const percentage = `${decimalNumber * 100}%`;
 
   return percentage;
 }
 
-console.log(decimalNumber);
+console.log(0.5);
 
-/*ERROR: SyntaxError: Identifier 'decimalNumber' has already been declared
+// const decimalNumber = 0.5;
+// ERROR: SyntaxError: Identifier 'decimalNumber' has already been declared
+
