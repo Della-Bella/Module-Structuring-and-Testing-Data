@@ -1,9 +1,9 @@
 // Predict and explain first...
 
-const num = 103;
+//const num = 103;
 
-function getLastDigit() {
-  return num.toString().slice(-1);
+function getLastDigit(numLast) {
+  return numLast.toString().slice(-1);
 }
 
 console.log(`The last digit of 42 is ${getLastDigit(42)}`);
@@ -28,7 +28,7 @@ function getLastDigit() {
 }*/
 // FIX
 
-const num = 103;
+/*const num = 103;
 
 function getLastDigit() {
   return num.toString().slice(-1);
@@ -47,4 +47,4 @@ The last digit of 42 is 3
 The last digit of 105 is 3
 The last digit of 806 is 3
 42
-gisdellabella@Giss-MBP debug % 
+gisdellabella@Giss-MBP debug */
