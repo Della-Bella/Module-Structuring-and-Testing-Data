@@ -20,5 +20,4 @@ function sum(a, b) {
 console.log(`The sum of 10 and 32 is ${sum(10, 32)}`);
 
 //The result wasn't returned because the sum of a and b wasn't included.
-
-
+//Now I have fixed the code, and it is returning the result
