@@ -8,7 +8,6 @@ return num * num;
  console.log (square (3))
 
 
-/* this function should square any number but instead we're going to get an error
- Fix 3 is not valid parameter name. should change function name to square(num)
- */
- gisdellabella@Giss-MBP errors % node 2.js
+
+//The error was with parameter 3, which always gave me the same result. 
+// By changing it to "num," the function now works with any number. Also 3 is used as the parameter name for the function, which is not valid in JavaScript.
