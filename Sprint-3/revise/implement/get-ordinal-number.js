@@ -5,19 +5,24 @@
 
 function getOrdinalNumber(number) {
   const suffixes = ["th", "st", "nd", "rd"];
-  const suffixIndex = number % 10;
+  const lastTwoDigits = number % 100; // Get the last two digits
+  const lastDigit = number % 10; // Get the last digit
 
-  if (suffixIndex === 1 && number !== 11) {
+  if (lastTwoDigits >= 11 && lastTwoDigits <= 13) {
+    return number + "th"; // Special cases for 11, 12, 13
+  } else if (lastDigit === 1) {
     return number + "st";
-  } else if (suffixIndex === 2 && number !== 12) {
+  } else if (lastDigit === 2) {
     return number + "nd";
-  } else if (suffixIndex === 3 && number !== 13) {
+  } else if (lastDigit === 3) {
     return number + "rd";
   } else {
     return number + "th";
   }
 }
+
 module.exports = getOrdinalNumber;
+
 
 //const input = 1;
 //const input = 4;

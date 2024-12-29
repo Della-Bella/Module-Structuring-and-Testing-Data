@@ -37,3 +37,15 @@ test("converts 23 to '23rd'", function () {
   const output = getOrdinalNumber(input);
   expect(output).toBe("23rd");
 });
+
+  test("returns '111th' for number 111", () => {
+    expect(getOrdinalNumber(111)).toBe("111th");
+  });
+
+  test("returns '112th' for number 112", () => {
+    expect(getOrdinalNumber(112)).toBe("112th");
+  });
+
+  test("returns '113th' for number 113", () => {
+    expect(getOrdinalNumber(113)).toBe("113th");
+  });
