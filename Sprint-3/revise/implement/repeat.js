@@ -1,24 +1,18 @@
 // Implement a function repeat
 
-function repeat(str, num) {
-  return str.repeat(num);
+function repeat(str, count) {
+  if (count < 0) {
+    throw new Error("Count cannot be negative.");
+  }
+
+  let result = "";
+  for (let i = 0; i < count; i++) {
+    result += str;
+  }
+  return result;
 }
 
-const repeatedString1 = repeat("Hello", 3);
-console.log(repeatedString1); // Output: "HelloHelloHello"
-
-const repeatedString2 = repeat("Apple is red", 1);
-console.log(repeatedString2); // Output: "Apple is red"
-
-const repeatedString3 = repeat("Banana is yellow", 0);
-console.log(repeatedString3); // Output: ""
-
-try {
-  const repeatedString4 = repeat("Orange is orange", -1);
-  console.log(repeatedString4);
-} catch (error) {
-  console.error("Error:", error.message); // Error: Invalid count value: -1
-}
+module.exports = repeat;
 
 // Given a target string str and a positive integer count,
 // When the repeat function is called with these inputs,
