@@ -19,26 +19,26 @@ function rotateChar(char, shift) {
     let charPosition = char.charCodeAt(0) - "a".charCodeAt(0);
     let newCharPosition = (charPosition + shift) % 26;
     if (newCharPosition < 0) {
-      newCharPosition += 26;
+      newCharPosition += 26; // Ensure positive result for negative shifts
     }
     return String.fromCharCode(newCharPosition + "a".charCodeAt(0));
   }
+
   if (char >= "A" && char <= "Z") {
     let charPosition = char.charCodeAt(0) - "A".charCodeAt(0);
     let newCharPosition = (charPosition + shift) % 26;
     if (newCharPosition < 0) {
-      newCharPosition += 26;
+      newCharPosition += 26; // Ensure positive result for negative shifts
     }
     return String.fromCharCode(newCharPosition + "A".charCodeAt(0));
   }
+
   return char; // Return the character unchanged if it's not a letter
 }
 
-console.log(rotateChar("a", 3)); // Output: "d"
-console.log(rotateChar("b", 2)); // Output: "d"
-console.log(rotateChar("z", 1)); // Output: "a"
+module.exports = rotateChar;
 
-module.exports = rotateChar; // Export rotateCharacter function
+ // Export rotateCharacter function
 
 // Scenario: Rotate Lowercase Letters:
 // Given a lowercase letter character and a positive integer shift,
