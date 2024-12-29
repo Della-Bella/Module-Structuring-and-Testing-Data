@@ -1,14 +1,6 @@
 const countChar = require("./count");
 
-test("multiple Occurrences", function () {
-  const input = 5;
-  const output = countChar(input);
-  expect(output).toBe("aaaaa"); // Expected result is '1st'
-});
-
-const countChar = require("./countChar");
-
-describe("countChar", () => {
+describe("countChar Function Tests", () => {
   test("counts multiple occurrences of a character", () => {
     const str = "aaaaa";
     const char = "a";
@@ -39,4 +31,3 @@ describe("countChar", () => {
     expect(countChar(str, char)).toBe(0);
   });
 });
-
