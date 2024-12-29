@@ -49,3 +49,10 @@ test(`card string input returns number`, function () {
   const targetInput = (NaN);
   expect(currentInput).toBe(targetInput);
 });
+
+
+describe("Handle Number Cards (2-10)", () => {
+  test("should return the numeric value for a given card rank", () => {
+    // Your actual test
+  });
+});
