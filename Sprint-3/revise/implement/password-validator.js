@@ -17,7 +17,7 @@ You must breakdown this problem in order to solve it. Find one test case
 first and get that working
 */
 
-function isNumberValid(input) {
+/*function isNumberValid(input) {
   if (typeof input === "number" && input >= 10000) {
     return true; // Have at least 5 characters.
   }
@@ -37,9 +37,9 @@ function isNumberValid(input) {
     }
   }
   return false; // If none of the above checks passed, the input is not valid
-}
+}*/
 
-// Examples of how the function works:
+/* Examples of how the function works:
 console.log(isNumberValid(15000)); // true (number >= 10000)
 console.log(isNumberValid("A")); // true (single uppercase letter)
 console.log(isNumberValid("z")); // true (single lowercase letter)
@@ -47,7 +47,41 @@ console.log(isNumberValid("5")); // true (single digit)
 console.log(isNumberValid("*")); // true (special character)
 console.log(isNumberValid("Hello")); // false (not valid)
 console.log(isNumberValid(5000)); // false (number < 10000)
-console.log(isNumberValid("!!")); // false (more than one character)
+console.log(isNumberValid("!!")); // false (more than one character)*/
 
+function isValidPassword(password, previousPasswords) {
+  // 1. Check password length
+  if (password.length < 5) {
+    return false; 
+  }
 
-module.exports = isNumberValid;
+  // 2. Check for uppercase letter
+  if (!/[A-Z]/.test(password)) { 
+    return false; 
+  }
+
+  // 3. Check for lowercase letter
+  if (!/[a-z]/.test(password)) { 
+    return false; 
+  }
+
+  // 4. Check for number
+  if (!/\d/.test(password)) { 
+    return false; 
+  }
+
+  // 5. Check for special character
+  if (!/[!#$%&*.]/.test(password)) { 
+    return false; 
+  }
+
+  // 6. Check for previous passwords
+  if (previousPasswords.includes(password)) {
+    return false;
+  }
+
+  // All conditions met
+  return true;
+
+};
+module.exports = isValidPassword;
