@@ -1,14 +1,14 @@
 // This problem involves playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
 
 // You will need to implement a function getCardValue
-const cardValues = {
+/*const cardValues = {
   A: 11,
   K: 10,
   Q: 10,
   J: 10,
   10: 10,
   9: 9,
-};
+};*/
 
 
 function getCardValue(card) {
