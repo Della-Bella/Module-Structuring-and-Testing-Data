@@ -6,19 +6,22 @@
 // Written here like this: 1/2 == Numerator/Denominator
 
 function isProperFraction(numerator, denominator) {
+  // Check if denominator is zero
   if (denominator === 0) {
-    throw new Error("Denominator can not be zero");
+    throw new Error("Denominator cannot be zero");
   }
-  if (numerator < denominator) {
-    return true;
-  } else if (numerator >= denominator) {
-    return false;
-  } else if (numerator < 0 && denominator >= 1) {
-    return true;
-  } else if (numerator === denominator) return false;
+
+  // Check if the absolute value of the numerator is less than the absolute value of the denominator
+  if (Math.abs(numerator) < Math.abs(denominator)) {
+    return true; // Proper fraction
+  }
+
+  // If the absolute value of the numerator is greater than or equal to the denominator, it's an improper fraction
+  return false; // Improper fraction
 }
 
 module.exports = isProperFraction;
+
 // Acceptance criteria:
 
 // Proper Fraction check:

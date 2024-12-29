@@ -1,68 +1,43 @@
-const isProperFraction = require("./is-proper-fraction");
+const isProperFraction = require("./isProperFraction");
 
-// Proper Fraction check:
-//where the numerator is less than the denominator 2/3
-//proper fraction= true
-test(`return true if numerator < denominator `, function () {
-  const numerator = 8;
-  const denominator = 12;
-  const currentInput = isProperFraction(numerator, denominator);
-  const targetInput = true;
-  expect(currentInput).toBe(targetInput);
+describe("isProperFraction", () => {
+  // Proper Fraction check
+  test("should return true for a proper fraction (numerator < denominator)", () => {
+    expect(isProperFraction(2, 3)).toBe(true); // 2/3 is a proper fraction
+  });
+
+  // Improper Fraction check
+  test("should return false for an improper fraction (numerator >= denominator)", () => {
+    expect(isProperFraction(5, 2)).toBe(false); // 5/2 is an improper fraction
+  });
+
+  // Zero Denominator check
+  test("should throw an error for a zero denominator", () => {
+    expect(() => isProperFraction(3, 0)).toThrow("Denominator cannot be zero");
+  });
+
+  // Negative Proper Fraction check
+  test("should return true for a negative proper fraction (|numerator| < denominator)", () => {
+    expect(isProperFraction(-4, 7)).toBe(true); // -4/7 is a proper fraction
+  });
+
+  // Equal Numerator and Denominator check
+  test("should return false for a fraction with equal numerator and denominator", () => {
+    expect(isProperFraction(3, 3)).toBe(false); // 3/3 is not a proper fraction (it's 1)
+  });
+
+  // Negative Improper Fraction check
+  test("should return false for a negative improper fraction (|numerator| >= denominator)", () => {
+    expect(isProperFraction(-5, 4)).toBe(false); // -5/4 is an improper fraction
+  });
+
+  // Positive Proper Fraction check
+  test("should return true for a positive proper fraction", () => {
+    expect(isProperFraction(3, 4)).toBe(true); // 3/4 is a proper fraction
+  });
+
+  // Negative Proper Fraction check (absolute value less than denominator)
+  test("should return true for a negative proper fraction with numerator absolute value less than denominator", () => {
+    expect(isProperFraction(-1, 5)).toBe(true); // -1/5 is a proper fraction
+  });
 });
-
-// Improper Fraction check:
-//where the numerator is greater than or  5/2
-//improper fraction = false
-test(`return false if numerator >= denominator `, function () {
-  const numerator = 5;
-  const denominator = 2;
-  const currentInput = isProperFraction(numerator, denominator);
-  const targetInput = false;
-  expect(currentInput).toBe(targetInput);
-});
-
-// Zero Denominator check:
-// Error (Denominator cannot be zero
-//it's not a valid fractio
-
-test(`return error if denominator is zero`, function () {
-  const numerator = 3;
-  const denominator = 0;
-  const targetInput = "Denominator can not be zero";
-  expect(() => {
-    isProperFraction(numerator, denominator);
-  }).toThrow(targetInput);
-});
-
-// Negative Fraction check:
-//proper fraction because the absolute
-//function should return true -4/7
-
-test(`return true if numerator <0 && >= 1`, function () {
-  const numerator = -4;
-  const denominator = 7;
-  const currentInput = isProperFraction(numerator, denominator);
-  const targetInput = true;
-});
-
-// Equal Numerator and Denominator check:
-//is not a proper fraction because the numerator is
-// equal to the denominator.
-//The function should return false
-
-test(`return false is numerator and demominator are the same`, function () {
-  const numerator = 3;
-  const denominator = 3;
-  const currentInput = isProperFraction(numerator, denominator);
-  const targetInput = false;
-});
-
-test(`return false is numerator and demominator are the same`, function () {
-  const numerator = 5;
-  const denominator = 5;
-  const currentInput = isProperFraction(numerator, denominator);
-  const targetInput = false;
-});
-
-
