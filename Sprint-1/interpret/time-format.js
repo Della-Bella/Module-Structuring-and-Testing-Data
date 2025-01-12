@@ -15,7 +15,13 @@ console.log(result);
 //5
 
 // b) How many function calls are there?
-//6
+//0  the code  uses variables (movieLength, remainingSeconds, totalMinutes, remainingMinutes, totalHours, result) to store values.
+//It performs calculations using arithmetic operators like % (modulo) and / (division).
+//It uses string interpolation (${...}) to create the formatted output.
+
+
+
+
 // c) Using documentation, explain what the expression movieLength % 60 represents
 //divided by 60, it's  convert seconds to a time format
 
