@@ -1,21 +1,42 @@
+
 const penceString = "399p";
+//declare a variable and assine a value 339p to it. 
 
 const penceStringWithoutTrailingP = penceString.substring(
-  0, // extracts a portion of the string here starting from index 0
-  penceString.length - 1 // extract ccarcter p (-1) index
-); // the result is asing to penceStringWithoutTrailingP
+  0,
+  penceString.length - 1
+);// This line removes the trailing "p" from the penceString
 
-const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"); // check it the string has 3 characters
+//penceString.length gives the total length of the string ("399p" has 4 characters).
+
+//penceString.length - 1 gives the index of the last character before the "p".
+
+// substring(0, penceString.length - 1) extracts a substring from the beginning of the string (index 0) up to, but not including, the last character.
+
+// This effectively removes the "p" from the end of the string, resulting in "399".*/
+
+const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+//This line pads the penceStringWithoutTrailingP with leading zeros to ensure it has a minimum length of 3 characters
+//adds "0" characters to the beginning of the string until its length reaches 3.
+//If the string is already 3 characters long, it remains unchanged.
+//If the string is shorter, it is padded with zeros at the beginning.
+//For example, "399" remains "399", while "99" becomes "099" and "9" becomes "009".
+
 const pounds = paddedPenceNumberString.substring(
-  0, //and stop with (0) so has to be 3 characters
-  paddedPenceNumberString.length - 2 //gets the characters from the beginning of the string up to 2 characters from the end.
-); // result is stored in paddedPenceNumberString
+  0,
+  paddedPenceNumberString.length - 2
+); 
+
+//This line extracts the pound value from the padded string 
+//It extracts a substring from the beginning of the paddedPenceNumberString up to two characters before the end.
+//For example, if paddedPenceNumberString is "399", it extracts "3" (representing 3 pounds).
 
 const pence = paddedPenceNumberString
-  .substring(paddedPenceNumberString.length - 2) // extracts the last 2 characters from the strin
-  .padEnd(2, "0"); //ensures the string is at least 2 characters long
+  .substring(paddedPenceNumberString.length - 2)
+  .padEnd(2, "0"); //This line extracts the pence value from the padded string and pads it with trailing zeros.
 
-console.log(`£${pounds}.${pence}`); // this is the result in a currency format
+console.log(`£${pounds}.${pence}`);
+//This line prints the formatted price to the console.
 
 // This program takes a string representing a price in pence
 // The program then builds up a string representing the price in pounds
