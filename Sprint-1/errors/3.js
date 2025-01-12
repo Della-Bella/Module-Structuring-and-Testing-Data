@@ -11,6 +11,8 @@
 // The code isin't work because slice is a method for strings and arrays, but cardNumber is defined as a number.
 // use slice on a number will result in an error.
 
+/* old submition
+
 const cardNumber = "4533787178994213";
 const last4Digits = cardNumber.slice(-4);
 
@@ -18,4 +20,16 @@ function cardnumber() {
   return cardNumber.slice(-4);
 }
 
-console.log(cardnumber());
+console.log(cardnumber());*/
+
+// New solution without modify the const cardNumber. I converted it to a String then used the function Slice, because Slice can only 
+//be used in a string. 
+
+
+const cardNumber = 4533787178994213;
+const cardNumberString = cardNumber.toString(); 
+const startIndex = cardNumberString.length - 4;
+const last4Digits = cardNumberString.slice(startIndex);
+
+console.log(last4Digits); 
+
