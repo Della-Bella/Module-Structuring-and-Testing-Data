@@ -6,7 +6,7 @@ let lastName = "Johnson";
  lled initials that stores the first character of each string.
 This should produce the string "CKJ", but you must not write the characters C, K, or J in the code of your solution.*/
 
-let firstName = "Creola";
+/*let firstName = "Creola";
 let middleName = "Katherine";
 let lastName = "Johnson";
 
@@ -19,3 +19,19 @@ console.log(initials());
 /*gisdellabella@Giss-MBP exercises % node initials.js
 CKJ
 gisdellabella@Giss-MBP exercises % */
+
+/* new solution*/
+
+let firstName = "Creola";
+let middleName = "Katherine";
+let lastName = "Johnson";
+
+
+let firstInitial = firstName.charAt(0);
+let middleInitial = middleName.charAt(0);
+let lastInitial = lastName.charAt(0);
+
+
+let initials = firstInitial + "." + middleInitial + "." + lastInitial + "."; 
+
+console.log(initials); 
