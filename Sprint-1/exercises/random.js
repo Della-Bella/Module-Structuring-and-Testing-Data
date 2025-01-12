@@ -32,7 +32,7 @@ const randomBetween1And200 = Math.random() * 200;
 
 done */
 
-const minimum = 1;
+/*const minimum = 1;
 const maximum = 100;
 
 const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
@@ -51,3 +51,14 @@ console.log(num);
 // gisdellabella@Giss-MBP exercises % node random.js
 // 37
 // gisdellabella@Giss-MBP exercises %
+
+const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+
+console.log(num);*/
+
+const minimum = -5;
+const maximum = 3;
+
+const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+
+console.log(num);
